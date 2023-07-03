@@ -16,3 +16,8 @@
 1. [Variables](https://www.w3schools.com/java/java_variables.asp)
 2. [Operations](https://www.w3schools.com/java/java_operators.asp)
 
+### Session 3. If else. Switch case. Logical operations.
+#### Useful links:
+1. [Operations](https://www.w3schools.com/java/java_operators.asp)
+2. [If else statement](https://www.w3schools.com/java/java_conditions.asp) 
+3. [Switch case](https://www.w3schools.com/java/java_switch.asp) 

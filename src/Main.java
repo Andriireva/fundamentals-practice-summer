@@ -14,9 +14,9 @@ public class Main {
         // Press Ctrl+R or click the green arrow button in the gutter to run the code.
         // for (int i = 1; i <= 5; i++) {
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-           // System.out.println("i = " + i);
+        // Press Ctrl+D to start debugging your code. We have set one breakpoint
+        // for you, but you can always add more by pressing Cmd+F8.
+        // System.out.println("i = " + i);
         //}
 
         // VARIABLE_TYPE VARIABLE_NAME = value
@@ -82,5 +82,82 @@ public class Main {
         System.out.println(textResult);
         System.out.println(summaryResult);
         System.out.println(stringResult);
+
+
+        // we want to execute a code based on condition
+        // if else statement
+        // switch case ...
+
+        int k = 55;
+        // boolean has 2 states : true (keyword), of false (keyword)
+        boolean simpleBooleanValue = true;
+        boolean comparingResult = k >= 555;
+        // I want to execute the code bellow if k is 5
+        // if is keyword
+        // == is comparing, >, <, >=, <=
+        // logic operation. AND - && , OR || ,  NOT - ! before logical operation, EQUAL - ==
+        // { } - united code lines, code block, block of code
+        boolean otherResult = k > 40 && (k * 4 > 210 || (k < 0));
+        if (otherResult) {
+            System.out.println("otherResult is true");
+        }
+        if (comparingResult || k / 5 == 10) { // a typing rule to add a tab after {
+            System.out.println("This code is cool");
+            System.out.println("and this one should printed in case comparingResult is true");
+        } else {
+            System.out.println("Else statement is executed ");
+        }
+
+        // Is number positive or negative
+        // it is possible to have as much if else statements as you want, but there may be only 1 else
+        int number = 0;
+        if (number > 0) {
+            System.out.println("Number is positive");
+        } else if (number < 0) {
+            System.out.println("Number is negative");
+        } else {
+            System.out.println("Number is zero");
+        }
+
+        // Switch case example
+        // We want to determinate name of week depends on number
+        // 1 - Sunday, 2 - Monday
+        int dayOfWeek = 8;
+        double doubl = 5.4;
+        char ch = 'A'; // char is single chachter variable
+        // in switch case it is possible to put variables of type: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
+        switch (dayOfWeek) {
+            case 1:
+                System.out.println("Sunday");
+                break; // break word prevent other cases
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            default:
+                // this code is executed in other cases...
+                System.out.println("dayOfWeek " + dayOfWeek + " is not applicable");
+                // balblalbal
+        }
+
+        if (dayOfWeek == 1) {
+            System.out.println("Sunday");
+        } else if (dayOfWeek == 2) {
+            System.out.println("Monday");
+        } else if (dayOfWeek == 3) {
+            System.out.println("Tuesday");
+            // dasdadasdsad
+        } else {
+            System.out.println("dayOfWeek " + dayOfWeek + " is not applicable");
+        }
+
+
+
+
     }
 }
