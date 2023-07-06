@@ -21,3 +21,8 @@
 1. [Operations](https://www.w3schools.com/java/java_operators.asp)
 2. [If else statement](https://www.w3schools.com/java/java_conditions.asp) 
 3. [Switch case](https://www.w3schools.com/java/java_switch.asp) 
+
+### Session 4. Loops. For. While. Do While
+#### Useful links:
+1. [For loop](https://www.w3schools.com/java/java_for_loop.asp)
+2. [While and do while](https://www.w3schools.com/java/java_while_loop.asp)

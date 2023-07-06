@@ -157,7 +157,106 @@ public class Main {
         }
 
 
+        // Loop in java
 
+        System.out.println("====== LOOPS ===========");
+        // for loop. Is used when you know the exact number of iterations
+        //   initial state; condition until loop runs; after loop execution
+        int j = 2;
+        System.out.println("J = " + j);
+        // we can re-assign declared variable to something new
+        j = j + 10; // such contruction icrease value by 1
+        System.out.println("J = " + j);
+//        for (int i = 0; i < 10; i = i + 1) { // there will 10 times iterations
+//            System.out.println("Looped code: Hello from Java");
+//            // "Magic code that is 3rd block in for statement is executed
+//        }
 
+        int n = 11;
+        int sumResult = 0; // it will be initial value of sum result
+        // We want to sum a values from 1 to n; summ = 1 + 2 + 3 + ...... n;
+        int ii = 0;
+        ii = ii + 1;
+        ii++; // ++ is the same as  ii = ii + 1
+        for (int i = 1; i <= n; i++) {
+            System.out.println("Iteration counter = " + i);
+            sumResult = sumResult + i;
+        }
+        System.out.println("Summ result = " + sumResult);
+
+        System.out.println("===== Even Sum Task ======");
+        // We want to summ even number from 0 to m ; summ = 0 + 2 + 4 + 6.... + m
+        int m = 10;
+        int sumEven = 0;
+        for (int i = 0; i <= m; i = i + 2 ) {
+            System.out.println("Iteration counter = " + i);
+            sumEven = sumEven + i;
+        }
+        System.out.println("Summ even result = " + sumEven);
+
+        // We want to summ values from u to 10; u + u-1 + u-2 + ..... 12 + 11 + 10
+        int u = 9;
+        int minValuesResult = 0;
+        // i = i - 1 is same as i--
+        for (int i = u; i >= 10; i--) {
+            System.out.println("Iteration counter = " + i);
+            minValuesResult = minValuesResult + i;
+        }
+        System.out.println("Summ min result = " + minValuesResult);
+
+        // we want to do this N! = 1 * 2 * 3 *....... * N
+        // 3! = 1 * 2 * 3;
+        int factorResult = 1;
+        int factor = 6;
+        for (int i = 1; i <= factor; i++) {
+            System.out.println("Iteration counter = " + i);
+            factorResult = factorResult * i;
+        }
+        System.out.println("Factor result = " + factorResult);
+
+        // WHILE is a loop that iterate unitl condion is true
+        System.out.println("==== WHILE ======");
+        boolean untillNotRich = true;
+        int money = 100;
+        int monthSalary = 200;
+        while (untillNotRich) {
+            if ( money >= 1000000 ) {
+                untillNotRich = false;
+            }
+            money = money + monthSalary;
+            // it shoulde run in a loop, but it is not clear the number of ierations
+        }
+        System.out.println("My money = " + money);
+
+        int sumEvenWhile = 0;
+        int counter = 2;
+        while (counter < m) {
+            sumEvenWhile = sumEvenWhile + counter;
+            counter = counter + 2;
+        }
+        System.out.println("sumEvenWhile = " + sumEvenWhile);
+
+        // do while will be executed AT LEAST once
+        int taxes = 1200;
+//        money = 2000;
+        do {
+            money = money - taxes;
+        } while (money > 500000);
+        System.out.println("My money after taxes = " + money);
+
+        int notLikedNumber = 20; // in case i reach this number as iterator I want to force stop loop
+        // We want sum all numbers that can be devided by 7
+        // int value % another value return module. 10 % 7 = 3, 16 % 7 = 2, 14 % 7 = 0
+        int devideSevenSum = 0;
+        for (int i = 0; i < 2000; i++) {
+            System.out.println("Iteration counter = " + i);
+            if (i % 7 == 0) { // check that value can be dived by 7
+                devideSevenSum = devideSevenSum + i;
+            }
+            if (i == notLikedNumber) {
+                break;
+            }
+        }
+        System.out.println("devideSevenSum " + devideSevenSum);
     }
 }
