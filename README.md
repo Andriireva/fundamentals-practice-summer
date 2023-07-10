@@ -26,3 +26,7 @@
 #### Useful links:
 1. [For loop](https://www.w3schools.com/java/java_for_loop.asp)
 2. [While and do while](https://www.w3schools.com/java/java_while_loop.asp)
+
+### Session 5. Arrays
+#### Useful links:
+1. [Array](https://www.w3schools.com/java/java_arrays.asp)
