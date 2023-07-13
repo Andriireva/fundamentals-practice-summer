@@ -30,3 +30,8 @@
 ### Session 5. Arrays
 #### Useful links:
 1. [Array](https://www.w3schools.com/java/java_arrays.asp)
+
+### Session 6. String
+#### Useful links:
+1. [String W3School](https://www.w3schools.com/java/java_strings.asp)
+2. [String methods](https://www.w3schools.com/java/java_ref_string.asp)
