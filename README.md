@@ -35,3 +35,13 @@
 #### Useful links:
 1. [String W3School](https://www.w3schools.com/java/java_strings.asp)
 2. [String methods](https://www.w3schools.com/java/java_ref_string.asp)
+
+### OOP. Simple class
+1. [OOP in java](https://www.w3schools.com/java/java_oop.asp)
+2. [Class attributes](https://www.w3schools.com/java/java_classes.asp)
+
+### OOP. Encapsulation. Constructors
+1. [Class methods](https://www.w3schools.com/java/java_class_methods.asp)
+2. [Constructors](https://www.w3schools.com/java/java_constructors.asp)
+3. [Modifiers](https://www.w3schools.com/java/java_modifiers.asp)
+4. [Encapsulation](https://www.w3schools.com/java/java_encapsulation.asp)
