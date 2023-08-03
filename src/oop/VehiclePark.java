@@ -1,7 +1,5 @@
 package oop;
 
-import java.util.Arrays;
-
 public class VehiclePark {
     public static void main(String[] args) {
         // I want to create a particular instance on Vehicle (red porche car, my first cycle)
@@ -16,22 +14,31 @@ public class VehiclePark {
         car.setType("CAR");
         System.out.println("My car color is " + car.getColor());
 
-        Vehicle bicycle = new Vehicle(434234234234L);
-        bicycle.setColor("orange");
-        bicycle.setCreatedYear(1985);
-        bicycle.setPrice(55.55);
-        bicycle.setHasPassengerSeat(false);
-        bicycle.setType("BICYCLE");
+        // it is possible to create a variable of type A but an actual type can be sub type of A
+        // but not vice versa code bellow cannot be complited
+        // Bicycle bicyclePrime = new Vehicle(444444L);
+        Vehicle bicycle = new Bicycle("orange", 1985, 55.55, "SmallOne", 423423423L, false, true);
         System.out.println("My first bicycle color is " + bicycle.getColor());
         System.out.println("My first bicycle price is " + bicycle.getPrice());
+        // bicycle declared type is Vehicle, but actual class is Bicycle
+        // instanceof - [variable] instanceof [ClassName] it check is variable [ClassName] tyoe
+        if (bicycle instanceof Bicycle) {
+            // it possible to used variable as some other child class.
+            // We should use casting approach - (([ClassName])[variable]).callClassNAmeMethods()
+            System.out.println("My favorite bicycle has child chair " + ((Bicycle)bicycle).isHasChildChair());
+        }
+        // if you will try to cast a variable to not appropraite Class - java.lang.ClassCastException appear
+//        System.out.println("My favorite bicycle has child chair " + ((Bicycle)car).isHasChildChair());
+        // without casting it does not work. Code bellow has issue
+//        System.out.println("My favorite bicycle has child chair " + bicycle.isHasChildChair());
 
-        Vehicle adultBicycle = new Vehicle(22222222231230L);
-        adultBicycle.setColor("yellow");
-        adultBicycle.setCreatedYear(2021);
-        adultBicycle.setPrice(0.55);
-        adultBicycle.setHasPassengerSeat(false);
-        adultBicycle.setType("BICYCLE");
-        adultBicycle.setName("null");
+
+        Bicycle myFavoriteBicycle = new Bicycle("black", 1985, 55.55, "SmallOne", 423423423L, false, true);
+        System.out.println("My favorite bicycle color is " + myFavoriteBicycle.getColor());
+        System.out.println("My favorite bicycle has child chair " + myFavoriteBicycle.isHasChildChair());
+        System.out.println("My favorite description " + myFavoriteBicycle.getBicycleDescription());
+
+        Vehicle adultBicycle = new Bicycle("yellow", 2021, 66.55, "null", 423423423L, false, false);
 
         Vehicle ship = new Vehicle("Green", 1989, 1000022.66, "BOAT", "Pefrect shiip", 43125555123L, true);
         Vehicle ship2 = new Vehicle("Green", 1989, 1000022.66, "BOAT", "Another one", 43123123123L, true);

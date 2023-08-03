@@ -45,3 +45,9 @@
 2. [Constructors](https://www.w3schools.com/java/java_constructors.asp)
 3. [Modifiers](https://www.w3schools.com/java/java_modifiers.asp)
 4. [Encapsulation](https://www.w3schools.com/java/java_encapsulation.asp)
+
+### OOP. Inheritance.
+1. [Inheritance](https://www.w3schools.com/java/java_inheritance.asp)
+2. [methods](https://www.w3schools.com/java/java_methods.asp)
+3. [Method parameters](https://www.w3schools.com/java/java_methods_param.asp)
+4. [Scope](https://www.w3schools.com/java/java_scope.asp)

@@ -13,9 +13,9 @@ public class Vehicle {
     // 2. Constructors
     // 3. Method (functions)
 
-    // private means that this variable, Constructors, or Method CAN be used ONLY in this class
-
-    private String color; // color variable
+    // private means that this variable, Constructors, or Method CAN be used ONLY in this class (not inherited)
+    // protected means that this varialbe (const, method) can be called here or in sub class
+    protected String color; // color variable. it can be accessed from Bicycle class
     private String name;
     private long serialNumber; // it must be initialized only one
     private String type; // “trucks, buses, cars, plain, ship.. “
@@ -48,12 +48,35 @@ public class Vehicle {
         this.serialNumber = serialNumber;
     }
 
+
+    private void privateVehicleMethod() {
+        System.out.println("privateVehicleMethod is called");
+        ///
+    }
+
+    protected void protectedVehicleMethod() {
+        System.out.println("protectedVehicleMethod is called");
+        ///
+    }
+
+
     // Method if a function that can be called on instance of this calls
     // [ACCESS TYPE ]( public, private .... ) [return type] [nameMethod]()
     public long getSerialNumber() {
         // inside {} is method body
         // return means that this method (function) return something
         return serialNumber;
+    }
+
+    public String doHardCalculation() {
+        /// there are 50 lines of code....
+        // instead 50 line code we will splt to a 5 private methods:
+        // 1 step do som
+        // 2nd doAnother
+        // ,.....
+        // doSomethWithNameANdPrice();
+        // getAvarageofBlblabla();
+        return "";
     }
 
     public String getName() {
