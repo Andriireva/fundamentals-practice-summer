@@ -51,3 +51,7 @@
 2. [methods](https://www.w3schools.com/java/java_methods.asp)
 3. [Method parameters](https://www.w3schools.com/java/java_methods_param.asp)
 4. [Scope](https://www.w3schools.com/java/java_scope.asp)
+
+### OOP. Polymorphism.
+1. [Overview](https://www.w3schools.com/java/java_polymorphism.asp)
+2. [Interfac](https://www.w3schools.com/java/java_interface.asp)

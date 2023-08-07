@@ -31,4 +31,19 @@ public class Bicycle extends Vehicle {
         protectedVehicleMethod(); // call parent method
         return color + " " + getSerialNumber() + " " + getName();
     }
+
+    // we Want to specify the move operation another way then in Parent class
+    // We overwrote parent functionality
+    public void move(String direction, double power) {
+        if (!direction.equals("forward")) {
+            System.out.println("Bicycle cannot move other then forward");
+        } else {
+            System.out.println("Moving using legs, direction = " + direction + ", power = " + power);
+        }
+    }
+
+    // this method is NOT overriden
+    public void move(String direction, int power) {
+        System.out.println("move(String direction, int power)");
+    }
 }

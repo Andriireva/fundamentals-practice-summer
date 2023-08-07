@@ -6,7 +6,7 @@ public class VehiclePark {
         int currentYear = 2023;
 
         //            it means that please create a new instance of Vehicle type
-        Vehicle car = new Vehicle(33200001231230L);
+        Vehicle car = new Car(33200001231230L);
         car.setColor("Red");
         car.setCreatedYear(2023);
         car.setPrice(100050.50);
@@ -21,7 +21,7 @@ public class VehiclePark {
         System.out.println("My first bicycle color is " + bicycle.getColor());
         System.out.println("My first bicycle price is " + bicycle.getPrice());
         // bicycle declared type is Vehicle, but actual class is Bicycle
-        // instanceof - [variable] instanceof [ClassName] it check is variable [ClassName] tyoe
+        // instanceof - [variable] instanceof [ClassName] it check is variable [ClassName] tyoe or inherited from [ClassName]
         if (bicycle instanceof Bicycle) {
             // it possible to used variable as some other child class.
             // We should use casting approach - (([ClassName])[variable]).callClassNAmeMethods()
@@ -54,7 +54,20 @@ public class VehiclePark {
 
         Vehicle myFutureVehicle = null;
 
-        Vehicle[] garage = { car, bicycle, adultBicycle, myFutureVehicle, ship, ship2 }; // an array of custom types
+        Plain smallPlain = new Plain(1231235675675L);
+        Helicopter smallHelicopter = new Helicopter(134234235675675L);
+        FlyCar flyExpensiveCar = new FlyCar(7777788888L);
+        smallPlain.fly();
+        smallHelicopter.fly();
+        flyExpensiveCar.fly();
+
+        Flyable[] flyVehicles = { smallPlain, smallHelicopter, flyExpensiveCar };
+        for (int i = 0; i < flyVehicles.length; i++) {
+            flyVehicles[i].fly();
+        }
+
+        Vehicle[] garage = { car, bicycle, smallHelicopter, adultBicycle,
+                myFutureVehicle, flyExpensiveCar, ship, ship2, smallPlain,  }; // an array of custom types
         // I want to get a color of the cheapest Bicycle from my garage
         double minPrice = garage[0].getPrice();
         String cheapesBicycleColor = "";
@@ -89,6 +102,26 @@ public class VehiclePark {
         }
         System.out.println("My 1st ship name is " + myFirstShipName);
         System.out.println("My ship serial number is " + ship.getSerialNumber());
+
+        System.out.println("==== Polymorphism ====");
+        // car variable declared type is Vehicle,
+        // and actual class is Vehicle, so move method will be called from Vehicle
+        car.move("forward", 55.44);
+        bicycle.move("forward", 0.5);
+
+        // bicycle variable declared type is  Vehicle,
+        // but actual class is Bicycle, so move method will be called from Bicycle
+        bicycle.move("forward", 1);
+        myFavoriteBicycle.move("forward", 1);
+        myFavoriteBicycle.move("forward", 1d);
+
+        int flyingAirCraft = 0;
+        for (int i = 0; i < garage.length; i++) {
+            if (garage[i] instanceof Flyable) {
+                flyingAirCraft++;
+            }
+        }
+        System.out.println("My fly transport number is " + flyingAirCraft);
 
     }
 }

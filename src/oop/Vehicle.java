@@ -6,6 +6,7 @@ package oop; // on the fisr line of java class file package should be (optional)
 // there are 3 (4)
 // Encapsulation - hiding from "above" internal execution (logic)
 // Inheritance -
+// Polymorphism - it is an ability to call the same method on declared, but it can work differently internally
 public class Vehicle {
 
     // What class has
@@ -128,5 +129,9 @@ public class Vehicle {
 
     public void setHasPassengerSeat(boolean hasPassengerSeat) {
         this.hasPassengerSeat = hasPassengerSeat;
+    }
+
+    public void move(String direction, double power) {
+        System.out.println("Im default move direction = " + direction + ", power = " + power);
     }
 }
