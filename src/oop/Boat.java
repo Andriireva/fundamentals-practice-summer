@@ -1,9 +1,9 @@
 package oop;
 
-public class Plain extends FlyVehicle {
-
-    public Plain(long serialNumber) {
-        super(serialNumber);
+public class Boat extends Vehicle {
+    public Boat(String color, int year, double price,
+         String name, long serialNumber, boolean hasSeats) {
+        super(color, year, price, "BOAT", name, serialNumber, hasSeats);
     }
 
     @Override
@@ -13,15 +13,5 @@ public class Plain extends FlyVehicle {
             return description.toUpperCase();
         }
         return description;
-    }
-
-    @Override
-    protected void someCalculation(int x, int y) {
-
-    }
-
-    @Override
-    void someCalculations() {
-
     }
 }

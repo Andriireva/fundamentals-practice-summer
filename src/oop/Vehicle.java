@@ -7,12 +7,18 @@ package oop; // on the fisr line of java class file package should be (optional)
 // Encapsulation - hiding from "above" internal execution (logic)
 // Inheritance -
 // Polymorphism - it is an ability to call the same method on declared, but it can work differently internally
-public class Vehicle {
+// Abstraction - some blueprint of class. it can be an interface or an abstract class
+public abstract class Vehicle {
 
-    // What class has
+    // What regular class has
     // 1. variables (are set of basic (other) types that can describe a single instance of this model (class)
     // 2. Constructors
     // 3. Method (functions)
+
+    // What is abstract class
+    // It can have variables, constructors, methods
+    // It can have abstract methods : methods that does not have implementation
+    // Abstract class cannot have an instance. It is not possible to create via "new" a new instance
 
     // private means that this variable, Constructors, or Method CAN be used ONLY in this class (not inherited)
     // protected means that this varialbe (const, method) can be called here or in sub class
@@ -134,4 +140,16 @@ public class Vehicle {
     public void move(String direction, double power) {
         System.out.println("Im default move direction = " + direction + ", power = " + power);
     }
+
+    // Abstract method example
+    // No body
+    public abstract String getDescription(boolean capitalize);
+
+    public String getDescriptionLastWord() {
+        String description = getDescription(false);
+        String[] words = description.split(" ");
+        return words[words.length - 1];
+    }
+
+
 }

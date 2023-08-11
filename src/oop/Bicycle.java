@@ -42,6 +42,15 @@ public class Bicycle extends Vehicle {
         }
     }
 
+    @Override
+    public String getDescription(boolean capitalize) {
+        String description = getType() + " " + getName() + " " + getSerialNumber() + " " + getColor();
+        if (capitalize) {
+            return description.toUpperCase();
+        }
+        return description;
+    }
+
     // this method is NOT overriden
     public void move(String direction, int power) {
         System.out.println("move(String direction, int power)");

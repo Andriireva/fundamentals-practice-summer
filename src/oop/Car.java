@@ -1,6 +1,8 @@
 package oop;
 
-public class Car extends Vehicle {
+
+// cannot be used outside of oop package
+class Car extends Vehicle {
 
     public Car(long serialNumber) {
         super(serialNumber);
@@ -18,4 +20,14 @@ public class Car extends Vehicle {
         super.move(direction, power); // it calls Vehicle.move method as it is
         System.out.println("Car is moving");
     }
+
+    @Override
+    public String getDescription(boolean capitalize) {
+        String description = getType() + " " + getSerialNumber() + " " + getName() + " " + getColor() + " " + getCreatedYear();
+        if (capitalize) {
+            return description.toUpperCase();
+        }
+        return description;
+    }
+
 }

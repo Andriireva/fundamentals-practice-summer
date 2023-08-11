@@ -3,7 +3,7 @@ package oop;
 // What is interfaces?
 // It is "simple" class that:
 // does not have constructors
-// does not have variables
+// does not have regular variables
 // can have a methods without implementation ( body)
 
 public interface Flyable {

@@ -40,8 +40,8 @@ public class VehiclePark {
 
         Vehicle adultBicycle = new Bicycle("yellow", 2021, 66.55, "null", 423423423L, false, false);
 
-        Vehicle ship = new Vehicle("Green", 1989, 1000022.66, "BOAT", "Pefrect shiip", 43125555123L, true);
-        Vehicle ship2 = new Vehicle("Green", 1989, 1000022.66, "BOAT", "Another one", 43123123123L, true);
+        Vehicle ship = new Boat("Green", 1989, 1000022.66, "Pefrect shiip", 43125555123L, true);
+        Vehicle ship2 = new Boat("Green", 1989, 1000022.66, "Another one", 43123123123L, true);
         ship.setName("RENAMED NAME");
         if (ship.getCreatedYear() == 1989 && ship.getColor() == "Green") {
             System.out.println("YES ship is 1989 years created");
@@ -123,5 +123,18 @@ public class VehiclePark {
         }
         System.out.println("My fly transport number is " + flyingAirCraft);
 
+
+        System.out.println("==== Garage stuff description =====");
+        for (int i = 0; i < garage.length; i++) {
+            if (garage[i] != null) {
+                System.out.println(garage[i].getDescription(true));
+            }
+        }
+        System.out.println("==== Garage description last word =====");
+        for (int i = 0; i < garage.length; i++) {
+            if (garage[i] != null) {
+                System.out.println(garage[i].getDescriptionLastWord());
+            }
+        }
     }
 }
