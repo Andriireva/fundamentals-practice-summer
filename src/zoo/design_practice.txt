@@ -1,0 +1,36 @@
+Task: Animal World
+
+You are tasked with designing a simple Animal World simulation using object-oriented principles in Java.
+The simulation should involve different types of animals with varying behaviors. Your design should showcase inheritance, polymorphism, and encapsulation.
+
+Your design should include the following classes:
+
+Animal: This is the parent class for all animals. It should have attributes like name, age, and sound (the sound the animal makes).
+It should also have methods to get and set these attributes and a method to make the animal produce its sound.
+
+Mammal: This class should inherit from the Animal class and represent mammals.
+It should include attributes specific to mammals, such as furColor and numberOfLegs.
+
+Bird: This class should also inherit from the Animal class and represent birds.
+It should include attributes specific to birds, such as wingspan and canFly.
+
+Fish: This class should inherit from the Animal class and represent fish.
+It should include attributes specific to fish, such as waterType and isPredator.
+
+Zoo: This class represents a zoo. It should maintain an array of animals.
+It should have methods to
+add animals,
+display information about animals,
+and make all the animals in the zoo produce their sounds.
+
+Your task is to:
+
+Design the class hierarchy based on the given scenario, ensuring that you use proper inheritance and encapsulation principles.
+Implement the classes with appropriate attributes and methods.
+Write a program that demonstrates the usage f these classes, including creating animals of different types,
+adding them to the zoo, displaying their information, and making them produce their sounds.
+Consider how to utilize inheritance and polymorphism to avoid code duplication and promote reusability.
+Also, think about the relationships between classes and how to encapsulate the attributes and behaviors properly.
+
+
+This task will challenge your skills in designing a class hierarchy that accurately represents the animal world scenario and your ability to implement inheritance and polymorphism concepts in Java.
