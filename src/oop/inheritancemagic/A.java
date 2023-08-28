@@ -3,7 +3,7 @@ package oop.inheritancemagic;
 import oop.Boat;
 import oop.Vehicle;
 
-public class A {
+public class A extends Inheratable {
 
     public A() {
         System.out.println("A constructor");
