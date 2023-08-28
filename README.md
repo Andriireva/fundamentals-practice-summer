@@ -55,3 +55,13 @@
 ### OOP. Polymorphism.
 1. [Overview](https://www.w3schools.com/java/java_polymorphism.asp)
 2. [Interfac](https://www.w3schools.com/java/java_interface.asp)
+
+### Static. Final. Varargs
+1. [Static](https://www.w3schools.com/java/ref_keyword_static.asp)
+2. [final](https://www.w3schools.com/java/ref_keyword_final.asp)
+3. [var args](https://www.w3schools.blog/java-varargs-variable-arguments-example)
+
+### Date types
+1. [Legacy date](https://www.w3schools.blog/java-util-date-class)
+2. [Instant](https://www.w3schools.blog/java-8-instant-class)
+3. [Date types overview](https://www.w3schools.com/java/java_date.asp)
