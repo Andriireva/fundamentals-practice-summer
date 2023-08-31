@@ -126,6 +126,11 @@ public abstract class Vehicle {
     }
 
     public void setPrice(double price) {
+        if (price < 0) {
+            // throw means that this method (setPrice) will exception ex after throw
+            throw new IllegalArgumentException();
+        }
+
         this.price = price;
     }
 

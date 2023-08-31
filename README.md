@@ -65,3 +65,7 @@
 1. [Legacy date](https://www.w3schools.blog/java-util-date-class)
 2. [Instant](https://www.w3schools.blog/java-8-instant-class)
 3. [Date types overview](https://www.w3schools.com/java/java_date.asp)
+
+### Exceptions
+1. [Tutorial](https://www.w3schools.blog/exception-handling-tutorial-java)
+2. [Exception Hierarchy](https://rollbar.com/blog/java-exceptions-hierarchy-explained/)
