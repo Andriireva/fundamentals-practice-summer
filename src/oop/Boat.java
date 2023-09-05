@@ -3,7 +3,7 @@ package oop;
 public class Boat extends Vehicle {
     public Boat(String color, int year, double price,
          String name, long serialNumber, boolean hasSeats) {
-        super(color, year, price, "BOAT", name, serialNumber, hasSeats);
+        super(color, year, price, VehicleType.BOAT, name, serialNumber, hasSeats);
     }
 
     @Override

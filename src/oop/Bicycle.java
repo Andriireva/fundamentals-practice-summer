@@ -20,7 +20,7 @@ public class Bicycle extends Vehicle {
             String name, long serialNumber, boolean hasSeats, boolean hasChildChair) {
         // super is keyword to call parent functionality
         // in code beloow it call constructor of Parent class
-        super(color, year, price, "BICYCLE", name, serialNumber, hasSeats);
+        super(color, year, price, VehicleType.BICYCLE, name, serialNumber, hasSeats);
 //        super.getColor();
         this.hasChildChair = hasChildChair;
 //        System.out.println("Hello");

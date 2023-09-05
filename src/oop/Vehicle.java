@@ -25,7 +25,7 @@ public abstract class Vehicle {
     protected String color; // color variable. it can be accessed from Bicycle class
     private String name;
     private long serialNumber; // it must be initialized only one
-    private String type; // “trucks, buses, cars, plain, ship.. “
+    private VehicleType type; // “trucks, buses, cars, plain, ship.. “
     private int createdYear;
     private double price;
     private boolean hasPassengerSeat;
@@ -38,7 +38,7 @@ public abstract class Vehicle {
     // "Green", 1989, 1000022.66, "BOAR", "Pefrect shiip", 43123123123L, true
     // Variables in () are variables that can be used ONLY in logic block code {}
     Vehicle(String color, int year, double price,
-            String type, String name, long serialNumber, boolean hasSeats) {
+            VehicleType type, String name, long serialNumber, boolean hasSeats) {
 
         // this is a reference to the instance of this class (or other stuff )
 
@@ -105,11 +105,11 @@ public abstract class Vehicle {
         this.color = color;
     }
 
-    public String getType() {
+    public VehicleType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(VehicleType type) {
         this.type = type;
     }
 

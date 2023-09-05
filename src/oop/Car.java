@@ -8,7 +8,7 @@ class Car extends Vehicle {
         super(serialNumber);
     }
 
-    Car(String color, int year, double price, String type, String name, long serialNumber, boolean hasSeats) {
+    Car(String color, int year, double price, VehicleType type, String name, long serialNumber, boolean hasSeats) {
         super(color, year, price, type, name, serialNumber, hasSeats);
     }
 

@@ -11,7 +11,7 @@ public class VehiclePark {
         car.setCreatedYear(2023);
         car.setPrice(100050.50);
         car.setHasPassengerSeat(true);
-        car.setType("CAR");
+        car.setType(VehicleType.CAR);
         System.out.println("My car color is " + car.getColor());
 
         // it is possible to create a variable of type A but an actual type can be sub type of A
@@ -72,7 +72,7 @@ public class VehiclePark {
         double minPrice = garage[0].getPrice();
         String cheapesBicycleColor = "";
         for (int i = 0; i < garage.length; i++) {
-            if (garage[i] != null && garage[i].getPrice() < minPrice && garage[i].getType() == "BICYCLE") {
+            if (garage[i] != null && garage[i].getPrice() < minPrice && garage[i].getType() == VehicleType.BICYCLE) {
                 minPrice = garage[i].getPrice();
                 cheapesBicycleColor = garage[i].getColor();
             }
@@ -95,7 +95,7 @@ public class VehiclePark {
 
         String myFirstShipName = "";
         for (int i = 0; i < garage.length; i++) {
-            if (garage[i] != null && garage[i].getType() == "BOAT"){
+            if (garage[i] != null && garage[i].getType() == VehicleType.BOAT){
                 myFirstShipName = garage[i].getName();
                 break;
             }

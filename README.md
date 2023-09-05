@@ -69,3 +69,7 @@
 ### Exceptions
 1. [Tutorial](https://www.w3schools.blog/exception-handling-tutorial-java)
 2. [Exception Hierarchy](https://rollbar.com/blog/java-exceptions-hierarchy-explained/)
+
+### Enum
+1. [Enums](https://www.w3schools.com/java/java_enums.asp)
+
