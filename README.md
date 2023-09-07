@@ -73,3 +73,8 @@
 ### Enum
 1. [Enums](https://www.w3schools.com/java/java_enums.asp)
 
+### Comparing Object. Comparator, Comparable
+1. [Equals and hashCode](https://www.w3schools.blog/hashcode-equals-java)
+2. [Comparator](https://www.w3schools.blog/comparator-interface-in-java)
+2. [Comparable](https://www.w3schools.blog/comparable-interface-in-java)
+3. [Comparator vs comparable](https://www.w3schools.blog/comparable-comparator-java)
