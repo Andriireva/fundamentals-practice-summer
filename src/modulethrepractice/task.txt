@@ -1,0 +1,32 @@
+Task: Event Management System
+
+You are tasked with designing a class for an Event Management System in Java.
+The class should represent an event, such as a conference, concert, or sports game,
+and should encapsulate various attributes and behaviors associated with events.
+
+Your Event class should include the following attributes:
+
+- Event Name: A string that represents the name or title of the event.
+- Event Date: A date data type (you can use the java.util.Date class or the newer java.time.LocalDate class) to store the date of the event.
+- Event Type: An enum type that represents the type of event. Define an enum called EventType with options like "Conference," "Concert," "Sports," etc.
+- Ticket Price: A double data type that represents the cost of a ticket for the event.
+- Location: A string that specifies the location or venue of the event.
+- Capacity: An integer that indicates the maximum number of attendees the event can accommodate.
+
+Your Event class should also include methods for the following behaviors:
+
+- Calculate Revenue: A method that calculates the total revenue generated from the event based on the number of attendees and the ticket price.
+- Check Availability: A method that checks whether there are available seats for the event.
+  It should return true if there are seats available and false otherwise.
+- ToString: Override the toString() method to provide a string representation of the event, including all its attributes.
+
+Your task is to:
+
+Design the Event class based on the given attributes and behaviors, ensuring proper encapsulation and data types.
+
+Define the EventType enum with appropriate options.
+
+Implement the methods mentioned above in the Event class.
+
+Write a simple program to demonstrate the usage of the Event class.
+Create instances of different events, calculate their revenue, check availability, and display event information.
