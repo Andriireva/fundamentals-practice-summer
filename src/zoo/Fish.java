@@ -1,5 +1,7 @@
 package zoo;
 
+import java.util.Objects;
+
 public class Fish extends Animal {
     private String waterType;
     private boolean isPredator;
@@ -36,5 +38,18 @@ public class Fish extends Animal {
     public String getInformation() {
         // call parent method + this class variables
         return super.getInformation() + " " + getWaterType() + " " + isPredator();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fish fish = (Fish) o;
+        return isPredator() == fish.isPredator() && Objects.equals(getWaterType(), fish.getWaterType());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getWaterType(), isPredator());
     }
 }

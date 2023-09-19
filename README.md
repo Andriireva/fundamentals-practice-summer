@@ -78,3 +78,7 @@
 2. [Comparator](https://www.w3schools.blog/comparator-interface-in-java)
 2. [Comparable](https://www.w3schools.blog/comparable-interface-in-java)
 3. [Comparator vs comparable](https://www.w3schools.blog/comparable-comparator-java)
+
+### Collections. List.
+1. [Collection Overview](https://www.w3schools.blog/collection-tutorial-java)
+2. [List](https://www.w3schools.blog/list-interface-in-java)
