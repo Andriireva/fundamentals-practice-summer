@@ -82,3 +82,7 @@
 ### Collections. List.
 1. [Collection Overview](https://www.w3schools.blog/collection-tutorial-java)
 2. [List](https://www.w3schools.blog/list-interface-in-java)
+
+### Sets
+1. [Hash set](https://www.w3schools.com/java/java_hashset.asp)
+2. [Iterator](https://www.w3schools.com/java/java_iterator.asp)

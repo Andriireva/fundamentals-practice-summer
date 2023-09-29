@@ -1,7 +1,6 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 
 // Collection is a structure that helps to store objects the way you want
 // Iterable -> Collection(Interface)   -> List (Interface)
@@ -27,6 +26,7 @@ public class CollectionBasics {
         Collection<String> stringCollection = new ArrayList<>();
         Collection<Double> doubleCollection = new ArrayList<>();
         doubleCollection.add(45.61d);
+        doubleCollection.add(22.123d);
         stringCollection.add("Abc");
 
         System.out.println("Size of collection " + stringCollection.size());
@@ -51,6 +51,34 @@ public class CollectionBasics {
         System.out.println("Size of collection " + stringCollection.size());
         stringCollection.clear();
 
+
+        System.out.println("===== Iterator Examples ===== ");
+        // each collection has .iterator()
+        Iterator<Double> iterator = doubleCollection.iterator();
+        while (iterator.hasNext()) {
+            Double nextItemInIterator = iterator.next();
+            System.out.println(nextItemInIterator);
+        }
+
+
+        System.out.println("==== I want to exclude duplicated from List and safe order ===");
+        // I want to exclude duplicated from List and safe order
+        // A, G, T, A, R, W, R - > A, F, T, R, W
+        List<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("G");
+        list.add("T");
+        list.add("A");
+        list.add("R");
+        list.add("W");
+        list.add("R");
+
+        Set<String> set = new LinkedHashSet<>(list);
+        List<String> sameOrderExcludeDuplicates = new ArrayList<>(set);
+
+        for (String resultValue: sameOrderExcludeDuplicates) {
+            System.out.println(resultValue);
+        }
 
     }
 }
