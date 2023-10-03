@@ -63,7 +63,7 @@ public class CollectionBasics {
 
         System.out.println("==== I want to exclude duplicated from List and safe order ===");
         // I want to exclude duplicated from List and safe order
-        // A, G, T, A, R, W, R - > A, F, T, R, W
+        // A, G, T, A, R, W, R - > A, G, T, R, W
         List<String> list = new ArrayList<>();
         list.add("A");
         list.add("G");
@@ -79,6 +79,23 @@ public class CollectionBasics {
         for (String resultValue: sameOrderExcludeDuplicates) {
             System.out.println(resultValue);
         }
+
+
+        System.out.println("====  I want to get a map of person mapped by id  =======");
+        // I want to get a map of person mapped by id
+        List<Person> personList = new ArrayList<>();
+        personList.add(new Person("Gustav", 123L));
+        personList.add(new Person("Alex", 43L));
+        personList.add(new Person("John", 33L));
+
+        Map<Long, Person> personMap = new HashMap<>();
+        for (Person person: personList) {
+            personMap.put(person.getId(), person);
+        }
+
+        Person person = personMap.get(43L);
+        System.out.println(person);
+        //
 
     }
 }

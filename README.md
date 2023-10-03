@@ -86,3 +86,8 @@
 ### Sets
 1. [Hash set](https://www.w3schools.com/java/java_hashset.asp)
 2. [Iterator](https://www.w3schools.com/java/java_iterator.asp)
+
+
+### Map
+1. [Hash Map](https://www.w3schools.com/java/java_hashmap.asp)
+2. 

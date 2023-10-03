@@ -6,6 +6,7 @@ import zoo.Fish;
 import zoo.Mammal;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 // List is an ordered and indexed collection
@@ -16,7 +17,14 @@ import java.util.List;
 // java.lang.IndexOutOfBoundsException appears when you try to use index that does not exist
 public class ListsExamples {
     public static void main(String[] args) {
+
+        // Big O notation - complexity over algorithm
         List<String> stringList = new ArrayList<>();
+        List<String> linkedList = new LinkedList<>();
+        // There only valueable case when LinkedList is "better" than ArrayList
+        linkedList.add(5, "Aaa");
+
+
         stringList.add("A"); // add method on LIST (!!!) add element to the end of list
         stringList.add("B");
         stringList.add("Another one");

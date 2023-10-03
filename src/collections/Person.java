@@ -11,6 +11,14 @@ public class Person implements Comparable<Person> {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
     @Override
     public boolean equals(Object o) {
 //        System.out.println("Person equals is called");
