@@ -90,4 +90,8 @@
 
 ### Map
 1. [Hash Map](https://www.w3schools.com/java/java_hashmap.asp)
-2. 
+
+### Functional interface. Default methods. Optional
+1. [Functional Interface](https://www.w3schools.blog/java-8-functional-interface-example)
+2. [Optional class](https://www.w3schools.blog/java-8-optional-class)
+3. [Default methods](https://www.baeldung.com/java-static-default-methods)

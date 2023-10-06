@@ -78,6 +78,12 @@ public class ListsExamples {
         // contains works based on equals method
         boolean containsShark = animals.contains(sharkTheSameAsSark);
         System.out.println("Contains sharkTheSameAsSark " + containsShark);
+
+
+        List someList = new ArrayList();
+        someList.add("hello");
+        someList.add(5);
+        Object o = someList.get(0);
     }
 
     // List<? extends Animal> it means it can be ant list of type that extends Animal
