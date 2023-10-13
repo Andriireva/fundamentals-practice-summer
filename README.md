@@ -95,3 +95,6 @@
 1. [Functional Interface](https://www.w3schools.blog/java-8-functional-interface-example)
 2. [Optional class](https://www.w3schools.blog/java-8-optional-class)
 3. [Default methods](https://www.baeldung.com/java-static-default-methods)
+
+### Stream api
+1. [Stream](https://www.w3schools.blog/java-8-stream-api-tutorial-with-examples)

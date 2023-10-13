@@ -1,7 +1,6 @@
 package java8features;
 
 import java.util.Optional;
-import java.util.function.Function;
 
 public class OptionalEmpls {
 
@@ -33,6 +32,43 @@ public class OptionalEmpls {
 //        System.out.println(resCap);
         System.out.println(i);
 
+
+        Address address = new Address("Cool", 44321, "Fur tree street", null);
+//        Person person = new Person("Charles Grandinson", 124123L, "Some important person", address);
+        Person person = new Person("Charles Grandinson", 124123L, "Some important person", address, 25);
+
+        System.out.println("=== more complex example pre java 8 way ===");
+        // I want to get a city name 2nd name capitalized of a person
+        String city = null;
+        if (person != null
+                && person.getAddress() != null
+                && person.getAddress().getCityName() != null) {
+            String fullCity = person.getAddress().getCityName();
+            String[] s = fullCity.split(" ");
+            if (s.length > 1) {
+                city = s[1].toUpperCase();
+            }
+        }
+
+        if (person != null) {
+            // pring it
+        }
+        System.out.println("City second name " + city);
+
+        System.out.println("=== more complex example java 8 way ===");
+        String cityJava8Way = Optional.ofNullable(person) // Optional<Person>
+                .map(p -> p.getAddress()) // Optional<Address>
+                .map(address1 -> address1.getCityName()) // Optional<String>
+                .map(cityName -> cityName.split(" ")) // Optional<String[]>
+                .filter(cityWords -> cityWords.length > 1) // Optional<String[]>
+                .map(cityWords -> cityWords[1].toUpperCase())
+//                .or(() -> Optional.ofNullable("qdqwdq")) // is neede when we need to switch to another Optional
+                .orElseGet(() -> {
+                    System.out.println("orElseGet called");
+                    return "Deafult Value";
+                }); // Lazy return
+//                .orElse("Deafult Value"); // Immediate return
+        System.out.println("City second name " + cityJava8Way);
     }
 
     private static String captitalize(String value) {
