@@ -1,11 +1,14 @@
 package java8features;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
+
+// Stream has 2 groups of methods:
+// - Intermediate methods that returns Steam (map, filter, flatMap, distinct, peek ....)
+// - Terminal that does not return Stream (collect, reduce, forEach, .. other )
+// Terminal operations start the stream
 public class StreamApiExamples {
 
     public static void main(String[] args) {
@@ -17,12 +20,17 @@ public class StreamApiExamples {
         );
 
         personList.add(
-                new Person("Alex Furguson ", 1231233L, "Football trainer",
+                new Person("Charles Grandinson", 4533L, "Coool notes",
+                        new Address("oldcity", 667231, "others st", null), 66)
+        );
+
+        personList.add(
+                new Person("Alex Furguson", 1231233L, "Football trainer",
                         null, 25)
         );
 
         personList.add(
-                new Person("Alex Furguson ", 1231233L, "Football trainer",
+                new Person("Alex Furguson", 1231233L, "Football trainer",
                         null, 25)
         );
 
@@ -78,6 +86,76 @@ public class StreamApiExamples {
                 .average() // Return is DoubleOptional (a kind of "sub type" of Optional
                 .orElse(0);
         System.out.println("Average age is " + averageAge);
+
+        System.out.println("==== I want to get a set of person names");
+        Set<String> names = personList.stream()
+                .filter(person -> person != null)
+                .map(person -> person.getName()) // Stream<String>
+                .collect(Collectors.toSet());
+
+        // stream.forEach() - is almost the same as regular for each loop
+//        for (String name: names) {
+//            System.out.println(name)
+//        }
+        // code above is the same as bellow
+
+        names.stream().forEach(name -> System.out.println(name));
+        // Same as above
+        // names.forEach(name -> System.out.println(name));
+
+
+        System.out.println("==== I want to get new list of person ordered by name");
+        // I want to order some elements { e1, e2, e3, e4, }
+        // el1 -10 , e2 11, e3 2 , e4  -44
+
+
+        Comparator<Person> personNameComparator = (person1, person2) -> {
+            if (person1 == null) {
+                return Integer.MAX_VALUE;
+            }
+            return person1.getName().compareTo(person2 != null ? person2.getName() : "");
+        };
+        List<Person> personOrderedByName = personList.stream()
+//                .sorted() // without argument it works based on Comparable
+                .sorted(personNameComparator.reversed().thenComparing((p1, p2) -> Long.compare(p1.getId(), p2.getId())))
+//                .sorted( with comprator) // without argument it works based on Comparable
+                .collect(Collectors.toList());
+        printElements(personOrderedByName);
+
+        System.out.println("==== I want limit element");
+        List<Person> personLimit3 = personList.stream()
+                .skip(2) // does not take into accont 2 elements
+                .limit(3) // it will cut other element then limit
+                .collect(Collectors.toList());
+        printElements(personLimit3);
+
+        System.out.println("==== I want to collect persons by id excluding nulls (to Map)"); // Map<Long, Person>
+        Map<Long, Person> personMap = personList.stream()
+                .filter(person -> person != null)
+                .collect(Collectors.toMap( // by default value by the same key is not overriden
+                        person -> person.getId(),
+                        Function.identity(), // the same as person -> person,
+                        (person1, person2) -> person1    // It is merge BiFunction that handle duplicated keys
+                                                        // if returns 1st argument than it does no override, otherwise override
+                ));
+        System.out.println(personMap.get(1231233L));
+
+        System.out.println("==== Any, all match ====");
+        boolean anyPersonIsNull = personList.stream()
+                .anyMatch(person -> person == null);
+        boolean allPersonsAreNull = personList.stream()
+                .allMatch(person -> person == null);
+        System.out.println("Any person is null " + anyPersonIsNull);
+        System.out.println("All persons is null " + allPersonsAreNull);
+
+
+        List<String> strings = Arrays.asList("Abc", "hhh", "WWW"); // Arrays.asList creates list
+
+        strings.stream()
+                .peek(s -> System.out.println("Peek method is called"));
+//                .collect(Collectors.toSet());
+
+
     }
 
     private static void printElements(Collection<Person> personsHasNotes) {
