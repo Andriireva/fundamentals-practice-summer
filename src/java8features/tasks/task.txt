@@ -1,0 +1,40 @@
+Task: Geometric Shapes
+
+Design a class hierarchy for representing geometric shapes. You should have one abstract class called Shape and two concrete classes called Circle and Rectangle that extend the Shape class. The classes should encapsulate attributes and behaviors commonly associated with geometric shapes.
+
+Shape (Abstract Class):
+
+Attributes:
+name (a string) - to store the name of the shape (e.g., "Circle," "Rectangle").
+Constructor:
+A constructor that takes the name as a parameter and initializes the attribute.
+Abstract Methods (to be implemented by subclasses):
+area() - calculates and returns the area of the shape.
+perimeter() - calculates and returns the perimeter of the shape.
+Concrete Method:
+displayInfo() - a method that displays information about the shape, including its name, area, and perimeter.
+
+Circle (Concrete Class):
+Attributes:
+radius (a double) - to store the radius of the circle.
+Constructor:
+A constructor that takes the name and radius as parameters and initializes the attributes.
+Implement Abstract Methods:
+Implement the area() and perimeter() methods for a circle based on its radius.
+
+Rectangle (Concrete Class):
+Attributes:
+length (a double) - to store the length of the rectangle.
+width (a double) - to store the width of the rectangle.
+Constructor:
+A constructor that takes the name, length, and width as parameters and initializes the attributes.
+Implement Abstract Methods:
+Implement the area() and perimeter() methods for a rectangle based on its length and width.
+Your task is to:
+
+Define the Shape abstract class with the mentioned attributes and abstract methods.
+Create the Circle class that extends Shape and implements the area() and perimeter() methods specific to circles.
+Create the Rectangle class that extends Shape and implements the area() and perimeter() methods specific to rectangles.
+Implement the displayInfo() method in the Shape class to display information about the shape.
+
+Write a simple program to demonstrate the usage of these classes. Create instances of circles and rectangles, calculate their areas and perimeters, and display their information using the displayInfo() method.
