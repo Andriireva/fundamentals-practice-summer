@@ -1,0 +1,29 @@
+1. Do practice. https://leetcode.com/
+2. Look on how algorithms works
+    2.1. Search algorithms
+    2.2. Sort algorithms (bubble, quick sort...). What is complexity? O(n), O(lg n)
+3. Popular java core topics
+    3.1. String ( create always new string on "modification"...)
+    3.2. primitive type vs Wrapper (int vs Integer, long vs Long)
+    3.3. OOP part
+    3.4. Collection hierarchy ( ex. LinkList vs ArrayList ?)
+    3.5. Thread question ??
+    3.6. Arrays ( regular [] )
+4. SQL (data base)
+    4.1. MySQL or PostgreSQL
+    4.2. Create a table request
+    4.3. Select, update, delete, insert requests
+        4.3.1 . Select where, join (less priority)
+    4.4. How to worh with SQL using java. see java.sql package. Classes like connection, preparedStatement, Driver...
+5. Learn only 1 language
+6. Design patterns. Look on book "gang of 4" patterns. Ex factory, factory method.
+7. Look what is SOLID, KISS
+8. English
+9. You need to know "your" market AI
+10. Be ready that you will fail some step. DON'T leave your dream to become java engineer!!! Look on prev step.
+11. Lean some framework, libraries
+    11.1. Java EE ( less popular )
+    11.2. Spring (the most popular frame)
+    11.3. Library - Hibernate ( JPA ), it SQL related library
+    11.4. Unit testing (Junit + mockito)
+    11.5. GIT version
