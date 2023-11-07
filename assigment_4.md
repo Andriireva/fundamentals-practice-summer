@@ -30,7 +30,7 @@ Methods:
 
 
 ### Tasks
-Add a collection (choose type bases on your own) with person and books. Some person can have books, some now.
+Add a collection (choose type bases on your own) with person and books. Some person can have books, some no.
 It is suggested to to it in seprate class in main method. Each task can be represented by method of this class.
 It suggested to use Stream API and Optional class
 
